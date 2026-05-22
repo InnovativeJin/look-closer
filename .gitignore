@@ -1,5 +1,7 @@
-# Source paper PDF — used only to draft the abstract, not part of the site
+# Source files — converted into web assets (assets/*.png), not served directly
 IEEE_conference_template_062824 (2).pdf
+Figure 1.pdf
+Figure 2.pdf
 
 # Local Claude Code settings
 .claude/
