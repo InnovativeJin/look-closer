@@ -279,11 +279,21 @@ main { display: block; }
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-.video-card video {
+.video-card video,
+.video-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
   background: #000000;
+  object-fit: contain;
+}
+/* Presentation video keeps a 16:9 frame */
+.video-card.presentation video {
+  aspect-ratio: 16 / 9;
+}
+/* Demo grid cells (ego-exo clips + result stills) use a 2:1 frame */
+.video-grid .video-card video,
+.video-grid .video-card img {
+  aspect-ratio: 2 / 1;
 }
 .video-card figcaption {
   background: var(--bg);

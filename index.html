@@ -54,11 +54,11 @@
 
       <!--
         ACTION BUTTONS
-        Paper -> opens assets/paper.pdf
+        Paper -> opens assets/SkillLens.pdf
         Video -> jumps to the presentation section below
       -->
       <nav class="action-buttons">
-        <a class="btn" href="assets/paper.pdf" target="_blank" rel="noopener">
+        <a class="btn" href="assets/SkillLens.pdf" target="_blank" rel="noopener">
           <span class="btn-icon">&#128196;</span> Paper
         </a>
         <a class="btn" href="#presentation" rel="noopener">
@@ -142,52 +142,62 @@
       <div class="container">
         <h2 class="section-title">Demo Videos</h2>
         <!--
-          DEMO VIDEOS — 3 rows x 2 columns
-          Add the files as:  assets/videos/demo1.mp4 ... assets/videos/demo6.mp4
-          Each video plays only when the user presses play.
+          DEMO VIDEOS — 4 rows x 2 columns
+          Rows 1-2: a demo video paired with its proficiency-dynamics
+          still image. Rows 3-4: demo videos. Videos play on click.
         -->
         <div class="video-grid">
 
           <figure class="video-card">
-            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+            <video controls preload="metadata" playsinline>
               <source src="assets/videos/demo1.mp4" type="video/mp4" />
             </video>
-            <figcaption>Demo 1</figcaption>
+            <figcaption>Basketball &mdash; Late Expert</figcaption>
           </figure>
 
           <figure class="video-card">
-            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+            <img src="assets/videos/demo1_still.png" alt="Proficiency dynamics for the basketball Late Expert clip" />
+            <figcaption>Proficiency dynamics &mdash; Late Expert</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline>
               <source src="assets/videos/demo2.mp4" type="video/mp4" />
             </video>
-            <figcaption>Demo 2</figcaption>
+            <figcaption>Basketball &mdash; Novice</figcaption>
           </figure>
 
           <figure class="video-card">
-            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+            <img src="assets/videos/demo2_still.png" alt="Proficiency dynamics for the basketball Novice clip" />
+            <figcaption>Proficiency dynamics &mdash; Novice</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline>
               <source src="assets/videos/demo3.mp4" type="video/mp4" />
             </video>
-            <figcaption>Demo 3</figcaption>
+            <figcaption>Cooking &mdash; Intermediate Expert</figcaption>
           </figure>
 
           <figure class="video-card">
-            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+            <video controls preload="metadata" playsinline>
               <source src="assets/videos/demo4.mp4" type="video/mp4" />
             </video>
-            <figcaption>Demo 4</figcaption>
+            <figcaption>Cooking &mdash; Novice</figcaption>
           </figure>
 
           <figure class="video-card">
-            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+            <video controls preload="metadata" playsinline>
               <source src="assets/videos/demo5.mp4" type="video/mp4" />
             </video>
-            <figcaption>Demo 5</figcaption>
+            <figcaption>Dance &mdash; Late Expert</figcaption>
           </figure>
 
           <figure class="video-card">
-            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+            <video controls preload="metadata" playsinline>
               <source src="assets/videos/demo6.mp4" type="video/mp4" />
             </video>
-            <figcaption>Demo 6</figcaption>
+            <figcaption>Dance &mdash; Novice</figcaption>
           </figure>
 
         </div>
