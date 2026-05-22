@@ -1,0 +1,9 @@
+# Source paper PDF — used only to draft the abstract, not part of the site
+IEEE_conference_template_062824 (2).pdf
+
+# Local Claude Code settings
+.claude/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

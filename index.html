@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Look Closer: Action-Guided Dense Visual Dynamics for Proficiency Estimation</title>
+  <meta name="description" content="Project page for 'Look Closer: Action-Guided Dense Visual Dynamics for Proficiency Estimation'." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Look Closer: Action-Guided Dense Visual Dynamics for Proficiency Estimation" />
+  <meta property="og:description" content="Action-guided dense visual dynamics for human proficiency estimation." />
+  <meta property="og:image" content="assets/teaser.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="container">
+      <p class="venue">Workshop &middot; 2026</p>
+
+      <h1 class="paper-title">
+        Look Closer: Action-Guided Dense Visual Dynamics
+        for Proficiency Estimation
+      </h1>
+
+      <!--
+        AUTHORS
+        Replace each href="#" with the author's personal / lab page.
+        Superscripts: 1 = Korea University, 2 = Yonsei University,
+                      3 = Korea Institute of Science and Technology (KIST)
+      -->
+      <p class="authors">
+        <a class="author" href="#" target="_blank" rel="noopener">Deokhyun Ahn</a><sup>1,3</sup>,
+        <a class="author" href="#" target="_blank" rel="noopener">Hyukjin Kim</a><sup>2,3</sup>,
+        <a class="author" href="#" target="_blank" rel="noopener">Jae-Ho Han</a><sup>1</sup>,
+        <a class="author" href="#" target="_blank" rel="noopener">Bumsub Ham</a><sup>2</sup>,
+        <a class="author" href="#" target="_blank" rel="noopener">Heeseung Choi</a><sup>3</sup>,
+        <a class="author" href="#" target="_blank" rel="noopener">Ig-Jae Kim</a><sup>3</sup>,
+        <a class="author" href="#" target="_blank" rel="noopener">Haksub Kim</a><sup>3</sup>
+      </p>
+
+      <p class="affiliations">
+        <span><sup>1</sup>Korea University</span>
+        <span><sup>2</sup>Yonsei University</span>
+        <span><sup>3</sup>Korea Institute of Science and Technology (KIST)</span>
+      </p>
+
+      <!--
+        ACTION BUTTONS
+        Replace href="#" with the real links when available.
+      -->
+      <nav class="action-buttons">
+        <a class="btn" href="#" target="_blank" rel="noopener">
+          <span class="btn-icon">&#128196;</span> Paper
+        </a>
+        <a class="btn" href="#" target="_blank" rel="noopener">
+          <span class="btn-icon">&#128209;</span> arXiv
+        </a>
+        <a class="btn" href="#" target="_blank" rel="noopener">
+          <span class="btn-icon">&#60;/&#62;</span> Code
+        </a>
+        <a class="btn" href="#presentation" rel="noopener">
+          <span class="btn-icon">&#9658;</span> Video
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== FIGURE CAROUSEL ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="carousel" id="figureCarousel">
+          <div class="carousel-viewport">
+
+            <figure class="carousel-slide is-active" data-caption="Figure 1. Where should we look to assess skill? Atomic-action windows compare dense visual dynamics against expert and novice prototypes, yielding an action-level proficiency margin.">
+              <img src="assets/teaser.png" alt="Teaser figure" />
+            </figure>
+
+            <figure class="carousel-slide" data-caption="Figure 2. Overview of the proposed pipeline. A frozen video-gaze classifier provides multimodal class probabilities, while atomic-action guidance localizes dense MAWS windows to compute an activity-normalized proficiency dynamics score.">
+              <img src="assets/overview.png" alt="Overview figure" />
+            </figure>
+
+          </div>
+
+          <button class="carousel-arrow prev" id="carouselPrev" aria-label="Previous figure">&#8249;</button>
+          <button class="carousel-arrow next" id="carouselNext" aria-label="Next figure">&#8250;</button>
+
+          <div class="carousel-controls">
+            <div class="carousel-dots" id="carouselDots"></div>
+          </div>
+        </div>
+        <p class="carousel-caption" id="carouselCaption"></p>
+      </div>
+    </section>
+
+    <!-- ========================= ABSTRACT ========================= -->
+    <section class="section">
+      <div class="container narrow">
+        <h2 class="section-title">Abstract</h2>
+        <p class="abstract">
+          Human proficiency estimation is challenging because skill is a high-level
+          and often subjective property that is not captured by action identity alone.
+          Existing approaches leverage multimodal observations such as ego-exo video,
+          gaze, pose, and inertial signals, but the gap between sensor-level evidence
+          and abstract proficiency labels remains difficult to bridge. We address this
+          gap by using language annotations as temporal guidance rather than direct
+          semantic supervision. Specifically, atomic action descriptions decompose each
+          activity into proficiency-relevant action windows, where we extract dense
+          visual dynamics from frame-level features. We then summarize each action
+          window into an action-dynamics feature and compare it against high- and
+          low-proficiency prototypes constructed from expert and novice executions
+          within the same activity-action category, yielding a high-low prototype
+          margin that measures relative execution quality.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== PRESENTATION VIDEO ==================== -->
+    <section class="section" id="presentation">
+      <div class="container narrow">
+        <h2 class="section-title">Presentation</h2>
+        <!--
+          PRESENTATION VIDEO
+          Add the file as:  assets/videos/presentation.mp4
+          No HTML change needed once the file exists — just drop it in.
+        -->
+        <figure class="video-card presentation">
+          <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+            <source src="assets/videos/presentation.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================= DEMO VIDEOS ======================== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Demo Videos</h2>
+        <!--
+          DEMO VIDEOS — 2 rows x 3 columns
+          Add the files as:  assets/videos/demo1.mp4 ... assets/videos/demo6.mp4
+          Each video plays only when the user presses play.
+        -->
+        <div class="video-grid">
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+              <source src="assets/videos/demo1.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Demo 1</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+              <source src="assets/videos/demo2.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Demo 2</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+              <source src="assets/videos/demo3.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Demo 3</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+              <source src="assets/videos/demo4.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Demo 4</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+              <source src="assets/videos/demo5.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Demo 5</figcaption>
+          </figure>
+
+          <figure class="video-card">
+            <video controls preload="metadata" playsinline poster="assets/video-poster.svg">
+              <source src="assets/videos/demo6.mp4" type="video/mp4" />
+            </video>
+            <figcaption>Demo 6</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= CITATION ========================= -->
+    <section class="section">
+      <div class="container narrow">
+        <h2 class="section-title">Citation</h2>
+        <pre class="bibtex"><code>@inproceedings{ahn2026lookcloser,
+  title     = {Look Closer: Action-Guided Dense Visual Dynamics
+               for Proficiency Estimation},
+  author    = {Ahn, Deokhyun and Kim, Hyukjin and Han, Jae-Ho and
+               Ham, Bumsub and Choi, Heeseung and Kim, Ig-Jae and Kim, Haksub},
+  booktitle = {Workshop},
+  year      = {2026}
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Look Closer &middot; Project Page</p>
+      <p class="muted">Korea University &middot; Yonsei University &middot; KIST</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

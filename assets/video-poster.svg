@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e2235"/>
+      <stop offset="1" stop-color="#2c3252"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="640" cy="330" r="86" fill="none" stroke="#7c8cf8" stroke-width="6" opacity="0.85"/>
+  <path d="M612 288 L612 372 L684 330 Z" fill="#7c8cf8"/>
+  <text x="640" y="478" font-family="Inter, Arial, sans-serif" font-size="38" fill="#aab1d6" text-anchor="middle" font-weight="600">Video coming soon</text>
+  <text x="640" y="524" font-family="Inter, Arial, sans-serif" font-size="26" fill="#6b7299" text-anchor="middle">Drop the file into assets/videos/</text>
+</svg>

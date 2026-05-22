@@ -1,0 +1,347 @@
+/* =========================================================
+   Look Closer: Action-Guided Dense Visual Dynamics
+   for Proficiency Estimation — Project Page
+   ========================================================= */
+
+:root {
+  --bg:           #ffffff;
+  --bg-alt:       #f5f6fb;
+  --text:         #1c1f2b;
+  --text-soft:    #565b70;
+  --text-muted:   #8b90a4;
+  --accent:       #4a5bd4;
+  --accent-dark:  #3344b8;
+  --ink:          #1c1f2b;
+  --border:       #e4e6ef;
+  --radius:       14px;
+  --maxw:         1060px;
+  --maxw-narrow:  780px;
+  --shadow:       0 10px 30px rgba(28, 31, 43, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+               Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.container.narrow { max-width: var(--maxw-narrow); }
+
+/* ========================== HEADER ========================== */
+.site-header {
+  text-align: center;
+  padding: 66px 0 48px;
+  background: linear-gradient(180deg, #eef0fa 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.venue {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 18px;
+}
+
+.paper-title {
+  font-size: 2.55rem;
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: -0.022em;
+  margin: 0 auto 26px;
+  max-width: 900px;
+}
+
+.authors {
+  font-size: 1.08rem;
+  margin: 0 auto 10px;
+  max-width: 840px;
+}
+.author {
+  color: var(--ink);
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.author:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.authors sup,
+.affiliations sup {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.72em;
+}
+
+.affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 22px;
+  font-size: 0.97rem;
+  color: var(--text-soft);
+  margin: 0 0 30px;
+}
+
+/* ====================== ACTION BUTTONS ====================== */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  background: var(--ink);
+  color: #ffffff;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.16s ease, transform 0.16s ease,
+              box-shadow 0.16s ease;
+}
+.btn:hover {
+  background: var(--accent);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(74, 91, 212, 0.32);
+}
+.btn-icon { font-size: 1rem; line-height: 1; }
+
+/* ========================= SECTIONS ========================= */
+main { display: block; }
+
+.section { padding: 52px 0; }
+.section:nth-of-type(even) { background: var(--bg-alt); }
+
+.section-title {
+  font-size: 1.62rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.015em;
+  margin: 0 0 30px;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+/* ===================== FIGURE CAROUSEL ====================== */
+.carousel { position: relative; }
+
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* Slides are stacked. The active slide stays in normal flow so the
+   viewport always takes the exact height of the figure on show;
+   the others are overlaid on top and faded out. */
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.carousel-slide.is-active {
+  position: relative;
+  opacity: 1;
+}
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  padding: 14px;
+}
+
+/* Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(28, 31, 43, 0.12);
+  transition: background 0.16s ease, color 0.16s ease, transform 0.16s ease;
+  z-index: 2;
+}
+.carousel-arrow:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.07);
+}
+.carousel-arrow.prev { left: 14px; }
+.carousel-arrow.next { right: 14px; }
+
+/* Dots */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.carousel-dots {
+  display: flex;
+  gap: 10px;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #cfd2e2;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.carousel-dot:hover { background: #a9adc6; }
+.carousel-dot.is-active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+/* Caption */
+.carousel-caption {
+  max-width: 860px;
+  margin: 16px auto 0;
+  text-align: center;
+  font-size: 0.93rem;
+  color: var(--text-soft);
+}
+
+/* ========================= ABSTRACT ========================= */
+.abstract {
+  margin: 0;
+  font-size: 1.06rem;
+  text-align: justify;
+  hyphens: auto;
+  color: var(--text);
+}
+
+/* ===================== PRESENTATION VIDEO =================== */
+.video-card {
+  margin: 0;
+  background: #000000;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000000;
+}
+.video-card figcaption {
+  background: var(--bg);
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 12px;
+}
+
+/* ======================== DEMO GRID ========================= */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ========================= CITATION ========================= */
+.bibtex {
+  margin: 0;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  overflow-x: auto;
+}
+.bibtex code {
+  font-family: 'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--text);
+  white-space: pre;
+}
+
+/* ========================== FOOTER ========================== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+  text-align: center;
+  padding: 34px 0;
+}
+.site-footer p {
+  margin: 4px 0;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+.site-footer .muted {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+/* ======================== RESPONSIVE ======================== */
+@media (max-width: 980px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .site-header { padding: 48px 0 38px; }
+  .paper-title { font-size: 1.85rem; }
+  .authors { font-size: 1rem; }
+  .section { padding: 40px 0; }
+  .section-title { font-size: 1.4rem; }
+  .video-grid { grid-template-columns: 1fr; }
+  .carousel-arrow { width: 38px; height: 38px; font-size: 1.25rem; }
+  .abstract { font-size: 1rem; }
+}
