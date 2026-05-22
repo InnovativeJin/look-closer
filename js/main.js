@@ -17,7 +17,7 @@
     var prevBtn   = document.getElementById('carouselPrev');
     var nextBtn   = document.getElementById('carouselNext');
 
-    var AUTOPLAY_MS = 6000;   // auto-switch interval
+    var AUTOPLAY_MS = 7000;   // auto-switch interval (ms between figures)
     var current     = 0;
     var timer       = null;
     var dots        = [];

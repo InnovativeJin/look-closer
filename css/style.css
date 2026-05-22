@@ -73,13 +73,14 @@ a:hover { text-decoration: underline; }
 }
 
 .authors {
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   margin: 0 auto 10px;
-  max-width: 840px;
+  max-width: 1020px;          /* wide enough to keep all authors on one line */
 }
 .author {
   color: var(--ink);
   font-weight: 600;
+  white-space: nowrap;        /* never split a single name across two lines */
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
@@ -159,10 +160,12 @@ main { display: block; }
 /* ===================== FIGURE CAROUSEL ====================== */
 .carousel { position: relative; }
 
+/* Fixed-ratio box: the figure area keeps the SAME size no matter
+   which image is shown, so the abstract below never jumps. */
 .carousel-viewport {
   position: relative;
   width: 100%;
-  min-height: 200px;
+  aspect-ratio: 16 / 9;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -170,26 +173,22 @@ main { display: block; }
   box-shadow: var(--shadow);
 }
 
-/* Slides are stacked. The active slide stays in normal flow so the
-   viewport always takes the exact height of the figure on show;
-   the others are overlaid on top and faded out. */
+/* Slides are stacked and cross-fade slowly between figures. */
 .carousel-slide {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0;
   margin: 0;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1.2s ease-in-out;
 }
 .carousel-slide.is-active {
-  position: relative;
   opacity: 1;
 }
 .carousel-slide img {
   width: 100%;
-  height: auto;
-  padding: 14px;
+  height: 100%;
+  object-fit: contain;   /* fit any figure size without cropping or stretching */
+  padding: 18px;
 }
 
 /* Arrows */
@@ -250,6 +249,8 @@ main { display: block; }
 /* Caption */
 .carousel-caption {
   max-width: 860px;
+  min-height: 4.6rem;      /* reserve space so captions of different
+                              lengths do not shift the abstract below */
   margin: 16px auto 0;
   text-align: center;
   font-size: 0.93rem;
@@ -292,7 +293,7 @@ main { display: block; }
 /* ======================== DEMO GRID ========================= */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);   /* 2 columns x 3 rows */
   gap: 22px;
 }
 
@@ -331,10 +332,6 @@ main { display: block; }
 }
 
 /* ======================== RESPONSIVE ======================== */
-@media (max-width: 980px) {
-  .video-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 640px) {
   .site-header { padding: 48px 0 38px; }
   .paper-title { font-size: 1.85rem; }
