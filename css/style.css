@@ -81,10 +81,14 @@ a:hover { text-decoration: underline; }
   color: var(--ink);
   font-weight: 600;
   white-space: nowrap;        /* never split a single name across two lines */
+}
+/* Only linked authors (a.author) get the interactive underline; the
+   plain-text authors (span.author) look the same but are not clickable. */
+a.author {
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
-.author:hover {
+a.author:hover {
   color: var(--accent);
   border-color: var(--accent);
   text-decoration: none;
@@ -295,23 +299,6 @@ main { display: block; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);   /* 2 columns x 3 rows */
   gap: 22px;
-}
-
-/* ========================= CITATION ========================= */
-.bibtex {
-  margin: 0;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  overflow-x: auto;
-}
-.bibtex code {
-  font-family: 'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
-  font-size: 0.86rem;
-  line-height: 1.6;
-  color: var(--text);
-  white-space: pre;
 }
 
 /* ========================== FOOTER ========================== */
