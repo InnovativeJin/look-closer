@@ -82,15 +82,15 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
   white-space: nowrap;        /* never split a single name across two lines */
 }
-/* Only linked authors (a.author) get the interactive underline; the
-   plain-text authors (span.author) look the same but are not clickable. */
+/* Linked authors (a.author) carry a visible underline so it is clear
+   they are clickable; the plain-text authors (span.author) do not. */
 a.author {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1.5px solid var(--accent);
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 a.author:hover {
   color: var(--accent);
-  border-color: var(--accent);
+  border-color: var(--accent-dark);
   text-decoration: none;
 }
 .authors sup,
