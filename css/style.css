@@ -94,7 +94,8 @@ a.author:hover {
   text-decoration: none;
 }
 .authors sup,
-.affiliations sup {
+.affiliations sup,
+.author-notes sup {
   color: var(--accent);
   font-weight: 700;
   font-size: 0.72em;
@@ -106,6 +107,16 @@ a.author:hover {
   justify-content: center;
   gap: 4px 22px;
   font-size: 0.97rem;
+  color: var(--text-soft);
+  margin: 0 0 8px;
+}
+
+.author-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 22px;
+  font-size: 0.9rem;
   color: var(--text-soft);
   margin: 0 0 30px;
 }
