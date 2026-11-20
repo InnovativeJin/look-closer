@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Look Closer: Action-Guided Dense Visual Dynamics for Proficiency Estimation</title>
-  <meta name="description" content="Project page for 'Look Closer: Action-Guided Dense Visual Dynamics for Proficiency Estimation'." />
+  <title>SkillLens: Action-Guided Dense Visual Dynamics for Proficiency Estimation</title>
+  <meta name="description" content="Project page for 'SkillLens: Action-Guided Dense Visual Dynamics for Proficiency Estimation'." />
 
   <!-- Open Graph / social preview -->
-  <meta property="og:title" content="Look Closer: Action-Guided Dense Visual Dynamics for Proficiency Estimation" />
+  <meta property="og:title" content="SkillLens: Action-Guided Dense Visual Dynamics for Proficiency Estimation" />
   <meta property="og:description" content="Action-guided dense visual dynamics for human proficiency estimation." />
   <meta property="og:image" content="assets/figure1.png" />
   <meta property="og:type" content="website" />
@@ -34,7 +34,7 @@
       <p class="venue">CVPR Workshop 2026</p>
 
       <h1 class="paper-title">
-        Look Closer: Action-Guided Dense Visual Dynamics
+        SkillLens: Action-Guided Dense Visual Dynamics
         for Proficiency Estimation
       </h1>
 
@@ -69,11 +69,11 @@
 
       <!--
         ACTION BUTTONS
-        Paper -> opens assets/SkillLens.pdf
+        Paper -> opens the arXiv page (arxiv.org/abs/2611.25712)
         Video -> jumps to the presentation section below
       -->
       <nav class="action-buttons">
-        <a class="btn" href="assets/SkillLens.pdf" target="_blank" rel="noopener">
+        <a class="btn" href="https://arxiv.org/abs/2611.25712" target="_blank" rel="noopener">
           <span class="btn-icon">&#128196;</span> Paper
         </a>
         <a class="btn" href="#presentation" rel="noopener">
@@ -121,15 +121,15 @@
           and often subjective property that is not captured by action identity alone.
           Existing approaches leverage multimodal observations such as ego-exo video,
           gaze, pose, and inertial signals, but the gap between sensor-level evidence
-          and abstract proficiency labels remains difficult to bridge. We address this
-          gap by using language annotations as temporal guidance rather than direct
-          semantic supervision. Specifically, atomic action descriptions decompose each
-          activity into proficiency-relevant action windows, where we extract dense
-          visual dynamics from frame-level features. We then summarize each action
-          window into an action-dynamics feature and compare it against high- and
-          low-proficiency prototypes constructed from expert and novice executions
-          within the same activity-action category, yielding a high-low prototype
-          margin that measures relative execution quality.
+          and abstract proficiency labels remains difficult to bridge. We present
+          SkillLens, a proficiency estimation framework that uses atomic action
+          descriptions as temporal guidance, rather than direct semantic supervision,
+          to localize proficiency-relevant windows for dense visual-dynamics extraction.
+          Each window is summarized into an action-dynamics feature and scored by a
+          high-low prototype margin against higher- and lower-proficiency executions
+          from the same activity-action category. Fusing these ego/exo PDM cues with a
+          global ego-exo-gaze baseline through CORAL ordinal calibration, our method
+          achieves 0.542 accuracy on Ego-Exo4D.
         </p>
       </div>
     </section>
@@ -214,7 +214,7 @@
   <!-- ============================ FOOTER ============================ -->
   <footer class="site-footer">
     <div class="container">
-      <p>Look Closer &middot; Project Page</p>
+      <p>SkillLens &middot; Project Page</p>
       <p class="muted">Korea University &middot; Yonsei University &middot; KIST</p>
     </div>
   </footer>

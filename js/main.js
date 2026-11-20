@@ -1,5 +1,5 @@
 /* =========================================================
-   Look Closer — Project Page interactions
+   SkillLens — Project Page interactions
    - Figure carousel: stacked slides, manual + auto switching
    - Videos: play on click only, one at a time
    ========================================================= */
